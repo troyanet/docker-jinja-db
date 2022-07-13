@@ -1,0 +1,25 @@
+{% extends "layouts/default.html" %}
+{% block content %}
+<h3>Welcome posts page</h3> 
+
+{% for post in posts %}
+    <div class="row post-block">
+        <figure class="">
+        <h3>{{ post.title }}</h3>
+        <hr />
+        <p>{{ post.post_date }}</p>
+        <p>{{ post.content }}</p>
+        <span class="text_right">{{ post.views }}</span>
+        </figure>
+    </div>
+{% endfor %}
+
+<style>
+    .post-block {
+        border: 1px solid #555;
+        margin: 10px;
+    }
+
+</style>
+
+{% endblock %}

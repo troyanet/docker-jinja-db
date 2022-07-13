@@ -1,0 +1,21 @@
+{% extends "layouts/default.html" %}
+{% block content %}
+<h2>Login Form</h2>
+
+<form method="POST">
+    {{form.errors}}
+    {{form.csrf_token}}
+    <div class="form-group">
+        {{form.email.label}}
+        {{form.email(class="form-control", placeholder="Enter email")}}
+    </div>
+
+    <div class="form-group">
+        {{form.password.label}}
+        {{form.password(class="form-control", placeholder="Password")}}
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+{% endblock %}
